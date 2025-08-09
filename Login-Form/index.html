@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GranCole - Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-wrapper">
+    <div class="left-side"></div>
+
+    <div class="right-side">
+      <div class="logo-container">
+        <img src="https://www.acams.org/sites/default/files/styles/atge_default_md/public/2020-11/CTMA.png?itok=uMprBes0" alt="CTMA" />
+      </div>
+      <h1 class="title">Bienvenido a <span>CTMA</span></h1>
+      <p class="subtitle">Inicia sesión para continuar</p>
+
+      <div class="login-card">
+        <h2>Iniciar Sesión</h2>
+        <p class="login-desc">Ingresa tus credenciales para acceder al sistema</p>
+        <form>
+          <div class="input-group">
+            <span class="icon">👤</span>
+            <input type="text" placeholder="Usuario" required />
+          </div>
+      <div class="input-group">
+        <span class="icon">🔒</span>
+        <input type="password" placeholder="Contraseña" required id="password"/>
+        <button type="button" id="togglePassword" aria-label="Mostrar/Ocultar contraseña" style="background:none;border:none;cursor:pointer;padding:0 8px;">
+            ⊙
+        </button>
+      </div>
+          <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+          <button type="submit" class="btn-login">Iniciar Sesión →</button>
+        </form>
+      </div>
+
+      <p class="register-text">
+        ¿No tienes cuenta? <a href="#">Contacta al administrador</a>
+      </p>
+      <p class="footer">© 2025 CTMA. Todos los derechos reservados.</p>
+    </div>
+  </div>
+    <script>
+    const passwordInput = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
+    togglePassword.addEventListener('click', function () {
+      const type = passwordInput.type === 'password' ? 'text' : 'password';
+      passwordInput.type = type;
+      this.textContent = type === 'password' ? '⊙' : '◠';
+    });
+    </script>
+</body>
+</html>
