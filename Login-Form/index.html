@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GranCole - Login</title>
+  <title>CTMA - Login</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
+
 <body>
   <div class="login-wrapper">
     <div class="left-side"></div>
@@ -28,13 +25,13 @@
             <span class="icon">👤</span>
             <input type="text" placeholder="Usuario" required />
           </div>
-      <div class="input-group">
-        <span class="icon">🔒</span>
-        <input type="password" placeholder="Contraseña" required id="password"/>
-        <button type="button" id="togglePassword" aria-label="Mostrar/Ocultar contraseña" style="background:none;border:none;cursor:pointer;padding:0 8px;">
-            ⊙
-        </button>
-      </div>
+          <div class="input-group">
+            <span class="icon">🔒</span>
+            <input type="password" placeholder="Contraseña" required id="password"/>
+            <button type="button" id="togglePassword" aria-label="Mostrar/Ocultar contraseña" style="background:none;border:none;cursor:pointer;padding:0 8px;">
+              ⊙
+            </button>
+          </div>
           <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
           <button type="submit" class="btn-login">Iniciar Sesión →</button>
         </form>
@@ -46,7 +43,8 @@
       <p class="footer">© 2025 CTMA. Todos los derechos reservados.</p>
     </div>
   </div>
-    <script>
+
+  <script>
     const passwordInput = document.getElementById('password');
     const togglePassword = document.getElementById('togglePassword');
     togglePassword.addEventListener('click', function () {
@@ -54,6 +52,6 @@
       passwordInput.type = type;
       this.textContent = type === 'password' ? '⊙' : '◠';
     });
-    </script>
+  </script>
 </body>
 </html>
